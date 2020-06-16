@@ -17,7 +17,7 @@ class GameMaterialPage extends StatelessWidget {
   /// Maximum size of the board,
   /// in pixels.
   static const kMaxBoardSize = 400.0;
-  static const kBoardMargin = 16.0;
+  static const kBoardMargin = 8.0;
   static const kBoardPadding = 4.0;
 
   final FocusNode _boardFocus = FocusNode();
@@ -157,7 +157,7 @@ class GameMaterialPage extends StatelessWidget {
                 constraints.maxWidth,
                 constraints.maxHeight,
               ),
-              kMaxBoardSize - (kBoardMargin + kBoardPadding) * 2,
+              kMaxBoardSize - (kBoardMargin + kBoardPadding) * 5,
             );
 
             return RawKeyboardListener(
@@ -218,7 +218,7 @@ class GameMaterialPage extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         Container(
-          width: 48,
+          width: 80,
           height: 48,
           child: Material(
             elevation: 0.0,
@@ -229,9 +229,14 @@ class GameMaterialPage extends StatelessWidget {
                 presenter.reset();
               },
               customBorder: CircleBorder(),
-              child: Icon(
-                FontAwesomeIcons.redoAlt,
-                size: 25,
+              child: Row(
+                children: <Widget>[
+                  Icon(
+                    FontAwesomeIcons.syncAlt,
+                    size: 18,
+                  ),
+                  Text('  Reiniciar'),
+                ],
               ),
             ),
           ),
@@ -245,7 +250,7 @@ class GameMaterialPage extends StatelessWidget {
         ),
         const SizedBox(width: 16.0),
         Container(
-          width: 48,
+          width: 80,
           height: 48,
           child: Material(
             elevation: 0.0,
@@ -266,7 +271,12 @@ class GameMaterialPage extends StatelessWidget {
                 );
               },
               customBorder: CircleBorder(),
-              child: Icon(FontAwesomeIcons.ellipsisV, size: 25),
+              child: Row(
+                children: <Widget>[
+                  Icon(FontAwesomeIcons.cogs, size: 18),
+                  Text('   Opções'),
+                ],
+              ),
             ),
           ),
         ),

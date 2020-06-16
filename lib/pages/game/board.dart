@@ -141,10 +141,8 @@ class _BoardWidgetState extends State<BoardWidget>
             extra.currentPoint = chip.currentPoint;
             _onChipChangePosition(chip, wasCurrentPoint, chip.currentPoint,
                 enableColorAnimation: false);
-
             // Change the color of the chip.
-            final color =
-                HSLColor.fromAHSL(1, hueStep * chip.number, 0.7, 0.5).toColor();
+            final color = HSLColor.fromAHSL(1, 200, 0.7, 0.5).toColor();
             _startColorBackgroundAnimation(
               chip,
               from: extra.backgroundColor,
@@ -167,9 +165,7 @@ class _BoardWidgetState extends State<BoardWidget>
               final x = chip.currentPoint.x / board.size;
               final y = chip.currentPoint.y / board.size;
               final scale = 0.0; // will be scaled by the animation
-              final color =
-                  HSLColor.fromAHSL(1, hueStep * chip.number, 0.7, 0.5)
-                      .toColor();
+              final color = HSLColor.fromAHSL(1, 200, 0.7, 0.5).toColor();
               return _Chip(
                 x,
                 y,
@@ -194,8 +190,7 @@ class _BoardWidgetState extends State<BoardWidget>
         chips = board.chips.map((chip) {
           final x = chip.currentPoint.x / board.size;
           final y = chip.currentPoint.y / board.size;
-          final color =
-              HSLColor.fromAHSL(1, hueStep * chip.number, 0.7, 0.5).toColor();
+          final color = HSLColor.fromAHSL(1, 200, 0.7, 0.5).toColor();
           return _Chip(x, y, chip.currentPoint, backgroundColor: color);
         }).toList(growable: false);
       });

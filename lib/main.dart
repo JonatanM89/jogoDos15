@@ -2,8 +2,6 @@ import 'dart:io';
 import 'package:jogo_do_quinze/config/ui.dart';
 import 'package:jogo_do_quinze/pages/page_splash.dart';
 import 'package:jogo_do_quinze/play_games.dart';
-import 'package:jogo_do_quinze/utils/platform.dart';
-import 'package:jogo_do_quinze/pages/page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +24,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final title = 'Game of Fifteen';
+    final title = '15Puzzle';
     return _MyMaterialApp(title: title);
   }
 }

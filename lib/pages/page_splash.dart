@@ -45,7 +45,7 @@ class _SplashPageState extends State<SplashPage> {
         children: <Widget>[
           DelayedAimation(
               child: Image.asset(
-                'assets/airplane_two.png',
+                'assets/1code.png',
                 width: _widthLogo,
               ),
               delay: delayedAmount + 50),
@@ -53,19 +53,9 @@ class _SplashPageState extends State<SplashPage> {
             height: 30,
           ),
           DelayedAimation(
-              child: Text('JOGO DOS 15',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromRGBO(47, 46, 46, 1))),
-              delay: delayedAmount + 100),
-          SizedBox(
-            height: 30,
-          ),
-          DelayedAimation(
               child: Text(
                 '1Code',
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 18, color: Colors.white),
               ),
               delay: delayedAmount + 200),
         ],
@@ -76,7 +66,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(255, 182, 0, 1),
+      backgroundColor: Color.fromRGBO(34, 34, 34, 1),
       body: Center(
         child: _renderLogo(),
       ),

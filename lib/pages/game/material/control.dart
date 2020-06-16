@@ -69,13 +69,13 @@ class _GamePlayStopButtonState extends State<GamePlayStopButton>
     final animRatioStop = _range(animation.value, begin: 0.0, end: 1.0);
 
     // Calculate the background color of the FAB.
-    final backgroundColorAccent = theme.accentColor.withOpacity(animRatioPlay);
+    /*final backgroundColorAccent = theme.accentColor.withOpacity(animRatioPlay);
     final backgroundColorCard = theme.cardColor.withOpacity(animRatioStop);
     final backgroundColor =
-        Color.alphaBlend(backgroundColorAccent, backgroundColorCard);
+        Color.alphaBlend(backgroundColorAccent, backgroundColorCard);*/
 
     return FloatingActionButton(
-      backgroundColor: backgroundColor,
+      backgroundColor: Color.fromRGBO(102, 153, 255, 1),
       onPressed: () => widget.onTap?.call(),
       child: Stack(
         children: <Widget>[

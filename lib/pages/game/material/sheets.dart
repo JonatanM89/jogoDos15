@@ -27,7 +27,7 @@ Widget createMoreBottomSheet(
                 color: Theme.of(context).brightness == Brightness.dark
                     ? Colors.black54
                     : Colors.black12,
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(2.0),
               ),
               child: InkWell(
                 onTap: () {
@@ -71,7 +71,7 @@ Widget createMoreBottomSheet(
       children: <Widget>[
         SizedBox(width: 4),
         IconButton(
-          icon: const Icon(FontAwesomeIcons.infoCircle),
+          icon: const Icon(FontAwesomeIcons.solidQuestionCircle),
           onPressed: () {
             Navigator.of(context).pop();
             showDialog(
@@ -104,7 +104,7 @@ Widget createMoreBottomSheet(
               },
               child: Text(config.useDarkTheme == null
                   ? 'Tema padrão'
-                  : config.useDarkTheme == true ? 'Dark theme' : 'Light theme'),
+                  : config.useDarkTheme == true ? 'Tema escuro' : 'Tema claro'),
             ),
           ),
         ),
@@ -115,12 +115,7 @@ Widget createMoreBottomSheet(
     Row(
       children: <Widget>[
         SizedBox(width: 8),
-        Expanded(
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: createBoard(size: 3, name: '8'),
-          ),
-        ),
+        Expanded(child: createBoard(size: 3, name: '8')),
         Expanded(child: createBoard(size: 4, name: '15')),
         Expanded(
           child: Align(
@@ -128,21 +123,31 @@ Widget createMoreBottomSheet(
             child: createBoard(size: 5, name: '24'),
           ),
         ),
+        Expanded(
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: createBoard(size: 6, name: '35'),
+          ),
+        ),
         SizedBox(width: 8),
       ],
     ),
-    SizedBox(height: 16),
+    SizedBox(height: 26),
     CheckboxListTile(
       dense: true,
-      title: const Text('Modo rápido'),
-      secondary: const Icon(FontAwesomeIcons.clock),
-      subtitle: const Text('Reduza as animações e alterne para toques na tela'),
+      title: const Text('Está lento?'),
+      secondary: const Icon(
+        FontAwesomeIcons.fighterJet,
+        color: Colors.green,
+      ),
+      subtitle: const Text('Reduzir as animações para melhorar a velocidade'),
       value: config.isSpeedRunModeEnabled,
       onChanged: (bool value) {
         var shouldEnableSpeedRun = !config.isSpeedRunModeEnabled;
         config.setSpeedRunModeEnabled(shouldEnableSpeedRun, save: true);
       },
     ),
+    SizedBox(height: 26),
   ];
 
   return SingleChildScrollView(

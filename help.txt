@@ -1,0 +1,2 @@
+ID ADMOB: ca-app-pub-4050004605588503~5938718314
+senha certificado = 1020304050*

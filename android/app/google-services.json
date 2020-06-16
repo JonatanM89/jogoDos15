@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "940878392310",
+    "firebase_url": "https://puzzle-37e87.firebaseio.com",
+    "project_id": "puzzle-37e87",
+    "storage_bucket": "puzzle-37e87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940878392310:android:696e312c06bb99e1f9b5d7",
+        "android_client_info": {
+          "package_name": "com.code.jogo_do_quinze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940878392310-mn0vufkai8tgjskvc7lfmegeipsh4skp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAINZLg2cZ63S2QqUMHCPqKYoEhlM2HVz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940878392310-mn0vufkai8tgjskvc7lfmegeipsh4skp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

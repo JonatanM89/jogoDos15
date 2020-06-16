@@ -15,8 +15,10 @@ class GameStepsWidget extends StatefulWidget {
 class _GameStepsState extends State<GameStepsWidget> {
   @override
   Widget build(BuildContext context) {
+    String jogadas =
+        widget.steps == 0 ? 'Nenhuma jogada' : '${widget.steps} jogadas';
     return Text(
-      '${widget.steps} jogadas',
+      '${jogadas}',
       style: Theme.of(context).textTheme.subtitle,
     );
   }

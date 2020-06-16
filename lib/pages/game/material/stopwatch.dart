@@ -101,6 +101,12 @@ class _GameStopwatchWidgetState extends State<GameStopwatchWidget>
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          /* StopwatchIcon(
+            size: 24,
+            millis: time,
+            color: Theme.of(context).iconTheme.color,
+          ),*/
+          const SizedBox(width: 16.0),
           SizedBox(
             width: 220.0,
             height: 108.0,
@@ -110,15 +116,10 @@ class _GameStopwatchWidgetState extends State<GameStopwatchWidget>
               maxLines: 1,
               style: Theme.of(context).textTheme.display3.copyWith(
                     fontSize: widget.fontSize,
+                    fontWeight: FontWeight.bold,
                     color: Theme.of(context).textTheme.title.color,
                   ),
             ),
-          ),
-          const SizedBox(width: 16.0),
-          StopwatchIcon(
-            size: 24,
-            millis: time,
-            color: Theme.of(context).iconTheme.color,
           ),
         ],
       ),

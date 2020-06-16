@@ -1,5 +1,4 @@
 import 'package:jogo_do_quinze/models/result.dart';
-import 'package:jogo_do_quinze/links.dart';
 import 'package:jogo_do_quinze/play_games.dart';
 import 'package:jogo_do_quinze/pages/game/format.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +59,8 @@ class GameVictoryDialog extends StatelessWidget {
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Text("Você completou o jogo ${result.size}x${result.size}"),
+          Text(
+              "Você completou o jogo com ${(result.size * result.size) - 1} itens :) "),
           const SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
